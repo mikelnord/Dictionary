@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 private const val BASE_URL_LOCATIONS = "https://dictionary.skyeng.ru/api/public/v1/"
 
-class RetrofitImplementation : DataSource<List<DataModel>> {
+class RetrofitImpl : DataSource<List<DataModel>> {
 
     override fun getData(word: String): Observable<List<DataModel>> {
         return getService(BaseInterceptor()).search(word)
